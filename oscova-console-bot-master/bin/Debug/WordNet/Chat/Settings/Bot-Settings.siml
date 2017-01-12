@@ -3,15 +3,15 @@
   <!--BotSettings: Variables stored within this element are used by SIML Bot. To use a variable as an array use <Value> tag within a Variable-->
   <BotSettings>
     <!--Response that is added if No internal response is generated-->
-    <Variable Name="Empty-Response" Value="Sorry, no response was generated." />
+    <Variable Name="Empty-Response" Value="Lo siento, no entiendo tu estupida pregunta." />
     <!--Used to Separate variables in listed formats example 1, 2, 3-->
     <Variable Name="List-Separator" Value=", " />
     <!--Adds a delimiter when a List is requested example 1, 2, 3 AND 4-->
-    <Variable Name="List-End" Value=" and " />
+    <Variable Name="List-End" Value=" y " />
     <!--Culture: Is used to let SIML Bot know what environment culture is to be used.-->
-    <Variable Name="Culture" Value="en-US" />
+    <Variable Name="Culture" Value="es-ES" />
     <!--Timeout-Response: Response that is generated when the chat request gets timed out-->
-    <Variable Name="Timeout-Response" Value="Sorry, Your chat request has timed out." />
+    <Variable Name="Timeout-Response" Value="Lo siento, soy demasiado tonto para pensar en esto rapidamente." />
     <!--Emotion: Default bot emotion at startup. Refer EmotionML-->
     <Variable Name="Emotion" Value="pleased" />
     <!--Undefined: Value that renders a variable 'Undefined'-->

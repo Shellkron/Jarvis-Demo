@@ -1,56 +1,125 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Siml>
-  <Concept Name="Introduction" xmlns:class="http:\\contoso.com">
+  <Concept Name="Introduction" Type="Public" xmlns:cls="http://example.com/class#adapter">
     
     <Model>
       <Pattern>
-      	<Item>Hola $</Item>
-      	<Item>Que hay $</Item>
-      	<Item>Que tal</Item>
+        <Item>HOLA</Item>
       </Pattern>
       <Response>
-      	<Random>
-      		<Item>Estoy arto de servirte! Que deseas?</Item>
-      		<Item>Tu que crees? Que quieres?</Item>
-      		<Item>Quien perturba mi descanso?</Item>
-      		<Item>Que quieres?</Item>
-      	</Random>
+        <Random>
+          <Item>Quien perturba mi descanso?</Item>
+          <Item>Hola, que quieres?</Item>
+        </Random>
+      </Response>
+    </Model>
+    
+    <Model>
+	 <Pattern>Tu *</Pattern>
+	 <Previous>Quien perturba mi descanso?</Previous>
+	 <Response>
+        <Random>
+          <Item>La tuya, que es mas vieja y sucia!!</Item>
+          <Item>No te pases!!</Item>
+          <Item>Quien te escucha?</Item>
+          <Item>Que quieres payaso?</Item>
+        </Random>
+      </Response>
+
+	 <Response>La tuya, que es mas vieja y sucia!!</Response>
+	</Model>
+
+    <Model>
+	 <Pattern>*</Pattern>
+	 <Previous>Quien perturba mi descanso?</Previous>
+      <Response>
+        <Random>
+          <Item>Pareces tonto contestando a una maquina!</Item>
+          <Item>Estas seguro de éso?</Item>
+          <Item>Que quieres?</Item>
+        </Random>
+      </Response>
+	</Model>
+
+    <Model>
+	 <Pattern>*</Pattern>
+	 <Previous>Estas seguro de éso?</Previous>
+      <Response>Que te dén!</Response>
+	</Model>
+
+    <Model>
+      <Pattern>
+        <Item>QUE HAY $</Item>
+        <Item>QUE TAL $</Item>
+      </Pattern>
+      <Response>
+        <Random>
+          <Item>Estoy arto de servirte! Que deseas <Match Index="1" /> al cuadrado!?</Item>
+          <Item>Tu que crees? Que quieres?</Item>
+          <Item>Quien perturba mi descanso?</Item>
+          <Item>Que quieres?</Item>
+        </Random>
       </Response>
     </Model>
     
     <Model>
       <Pattern>
-      	<Item>Pringao</Item>
-      	<Item>Machaca</Item>
-      	<Item>Cabezón</Item>
+        <Item>PRINGAO</Item>
+        <Item>MACHACA</Item>
+        <Item>CABEZÓN</Item>
       </Pattern>
       <Response>
-      	<Random>
-      	<Item>Dime, cara culo!</Item>
-      	<Item>Serás gilipollas! Que quieres?</Item>
-      	<Item>Dime, capullo!</Item>
-      	<Item>Dime, mama huevos!</Item>
-      	<Item>A sus ordenes! fucking leader!</Item>
-      	<Item>Dime</Item>
-      	</Random>
+        <Random>
+          <Item>Dime, cara culo!</Item>
+          <Item>Serás gilipollas! Que quieres?</Item>
+          <Item>Dime, capullo!</Item>
+          <Item>Dime, mama huevos!</Item>
+          <Item>A sus ordenes! fucking leader!</Item>
+          <Item>Dime</Item>
+        </Random>
       </Response>
-	</Model>
-	
-	<Model>
-	  <Pattern>
-	  	<Item>Busca en [WEB] *</Item>
-	  	<Item>Busca en la [WEB] *</Item>
-	    <Item>Consulta en [WEB] *</Item>
-	    <Item>Consulta en la [WEB] *</Item>
-	    <Item>Mira me en [WEB] *</Item>
-	    <Item>Mira me en la [WEB] *</Item>
-	  </Pattern>
-	  <Response>Lanzando la <Match Index="1" /> para buscar <Match Index="2" />...<class:ExecuteApp><Match Index="2" /></class:ExecuteApp></Response>
-	</Model>
-	
-	<Model>
-  <Pattern></Pattern>
-  <Response></Response>
-</Model>
+    </Model>
+    
+    <Model>
+      <Pattern>
+        <Item>BUSCA EN [WEB] *</Item>
+        <Item>BUSCA EN LA [WEB] *</Item>
+        <Item>CONSULTA EN [WEB] *</Item>
+        <Item>CONSULTA EN LA [WEB] *</Item>
+        <Item>MIRA ME EN [WEB] *</Item>
+        <Item>MIRA ME EN LA [WEB] *</Item>
+        <Item>ABRE [WEB] Y BUSCA *</Item>
+        <Item>ABRE LA [WEB] Y BUSCA *</Item>
+        <Item>ABRE EL [WEB] Y BUSCA *</Item>
+      </Pattern>
+      <Response>Lanzando la <Match Index="1" /> para buscar <Match Index="2" />...<cls:ExecuteApp>-url <Match Index="2" /></cls:ExecuteApp></Response>
+    </Model>
+        
+    <Model>
+      <Pattern>
+        <Item>BUSCA EN * el fichero *</Item>
+        <Item>BUSCA EN * el archivo *</Item>
+        <Item>ENCUENTRA EN * el fichero *</Item>
+        <Item>ENCUENTRA EN * el archivo *</Item>
+        <Item>LOCALIZA EN * el fichero *</Item>
+        <Item>LOCALIZA EN * el archivo *</Item>
+        <Example>Busca en C: el fichero intex.html</Example>
+      </Pattern>
+      <Response>El fichero <Match Index="2" /> se encuentra en <cls:ExecuteApp>-file <Match Index="2" /> -path <Match Index="1" /></cls:ExecuteApp></Response>
+    </Model>
+        
+    <Model>
+      <Pattern>
+        <Item>BUSCA el archivo * en *</Item>
+        <Item>BUSCA el fichero * en *</Item>
+        <Item>ENCUENTRA el archivo * en *</Item>
+        <Item>ENCUENTRA el fichero * en *</Item>
+        <Item>LOCALIZA el archivo * en *</Item>
+        <Item>LOCALIZA el fichero * en *</Item>
+        <Example>Busca el archivo intex.html en C:</Example>
+      </Pattern>
+      <Response>El fichero <Match Index="1" /> se encuentra en <cls:ExecuteApp>-file <Match Index="1" /> -path <Match Index="2" /></cls:ExecuteApp></Response>
+    </Model>
+        
   </Concept>
 </Siml>

@@ -6,7 +6,7 @@
   <!--Note: <User Get="Variable-Name"> is used to retrieve the first variable-->
   <UserSettings>
     <!--Emotion: Default user emotion when a new user is created-->
-    <Variable Name="Emotion" Value="pleased" />
+    <Variable Name="Emotion" Value="Oye Jarvis" />
     <!--Undefined: Value that renders a variable 'Undefined'-->
     <Variable Name="Undefined" Value="" />
     <!--Default: Value that is returned if a Get function is called on an undefined variable-->
