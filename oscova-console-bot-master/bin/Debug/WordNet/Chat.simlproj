@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<simlproject>
+  <name>PruebaIntents</name>
+  <directory>Chat</directory>
+  <botname>Jarvis</botname>
+  <personality>Asistente</personality>
+  <author>Adan</author>
+  <description>Prueba de asistente</description>
+  <date>16:31:35, miércoles, 11 de enero de 2017</date>
+  <notes></notes>
+</simlproject>

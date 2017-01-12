@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Siml>
+  <Concept Name="Introduction" xmlns:class="http:\\contoso.com">
+    
+    <Model>
+      <Pattern>
+      	<Item>Hola $</Item>
+      	<Item>Que hay $</Item>
+      	<Item>Que tal</Item>
+      </Pattern>
+      <Response>
+      	<Random>
+      		<Item>Estoy arto de servirte! Que deseas?</Item>
+      		<Item>Tu que crees? Que quieres?</Item>
+      		<Item>Quien perturba mi descanso?</Item>
+      		<Item>Que quieres?</Item>
+      	</Random>
+      </Response>
+    </Model>
+    
+    <Model>
+      <Pattern>
+      	<Item>Pringao</Item>
+      	<Item>Machaca</Item>
+      	<Item>Cabezón</Item>
+      </Pattern>
+      <Response>
+      	<Random>
+      	<Item>Dime, cara culo!</Item>
+      	<Item>Serás gilipollas! Que quieres?</Item>
+      	<Item>Dime, capullo!</Item>
+      	<Item>Dime, mama huevos!</Item>
+      	<Item>A sus ordenes! fucking leader!</Item>
+      	<Item>Dime</Item>
+      	</Random>
+      </Response>
+	</Model>
+	
+	<Model>
+	  <Pattern>
+	  	<Item>Busca en [WEB] *</Item>
+	  	<Item>Busca en la [WEB] *</Item>
+	    <Item>Consulta en [WEB] *</Item>
+	    <Item>Consulta en la [WEB] *</Item>
+	    <Item>Mira me en [WEB] *</Item>
+	    <Item>Mira me en la [WEB] *</Item>
+	  </Pattern>
+	  <Response>Lanzando la <Match Index="1" /> para buscar <Match Index="2" />...<class:ExecuteApp><Match Index="2" /></class:ExecuteApp></Response>
+	</Model>
+	
+	<Model>
+  <Pattern></Pattern>
+  <Response></Response>
+</Model>
+  </Concept>
+</Siml>

@@ -1,0 +1,14 @@
+C:\Users\fadan\Downloads\oscova-console-bot-master\bin\Debug\OscovaConsoleBot.exe.config
+C:\Users\fadan\Downloads\oscova-console-bot-master\bin\Debug\OscovaConsoleBot.exe
+C:\Users\fadan\Downloads\oscova-console-bot-master\bin\Debug\OscovaConsoleBot.pdb
+C:\Users\fadan\Downloads\oscova-console-bot-master\bin\Debug\Jint.dll
+C:\Users\fadan\Downloads\oscova-console-bot-master\bin\Debug\Newtonsoft.Json.dll
+C:\Users\fadan\Downloads\oscova-console-bot-master\bin\Debug\Syn.Bot.dll
+C:\Users\fadan\Downloads\oscova-console-bot-master\bin\Debug\Syn.Log.dll
+C:\Users\fadan\Downloads\oscova-console-bot-master\bin\Debug\Syn.VA.dll
+C:\Users\fadan\Downloads\oscova-console-bot-master\bin\Debug\Syn.WordNet.dll
+C:\Users\fadan\Downloads\oscova-console-bot-master\bin\Debug\Newtonsoft.Json.xml
+C:\Users\fadan\Downloads\oscova-console-bot-master\bin\Debug\Syn.Bot.xml
+C:\Users\fadan\Downloads\oscova-console-bot-master\obj\Debug\OscovaConsoleBot.exe
+C:\Users\fadan\Downloads\oscova-console-bot-master\obj\Debug\OscovaConsoleBot.pdb
+C:\Users\fadan\Downloads\oscova-console-bot-master\obj\Debug\OscovaConsoleBot.csprojResolveAssemblyReference.cache
